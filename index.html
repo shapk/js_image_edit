@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="http://127.0.0.1/jq.js"> </script>
+<script type="text/javascript" src="imageEdit.js"> </script>
+<style type="text/css">
+.layer{
+	position: absolute; 
+	line-height: 0px; 
+	font-size: 0px; 
+	border-width: 1px; 
+	border-style: solid; 
+    
+	width: 1px; 
+    height: 1px; 
+    left: 101px; 
+    top: 227px;
+}
+.l1{
+	background-color: rgb(255, 255, 255);
+	opacity: 0.2;
+}
+.l2{
+	border-color: rgb(0, 0, 0);
+}
+.l3{
+   border-style:dashed;
+   border-color: rgb(255, 255, 255); 
+   cursor: se-resize;
+}
+</style>
+</head>
+<body>
+<div style="float:left;padding-right:10px;">
+ <img alt="" src="image/image.jpg" width="500px" height="500px" id="image_edit">
+</div>
+<div style="width:100px; height:100px; overflow:hidden;">
+ <img alt=""  src="image/image.jpg" id="imageThumb">
+</div>
+<script type="text/javascript">
+$(function(){
+	$("#image_edit").imageEdit({
+		"thumbnails":"imageThumb"
+	});
+});
+</script>
+
+<div class="layer l1"></div>
+<div class="layer l2"></div>
+<div class="layer l3"></div>
+
+</body>
+</html>
